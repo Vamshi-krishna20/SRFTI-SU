@@ -26,6 +26,17 @@ const mockProfile = {
   ],
 };
 
+export function generateStaticParams() {
+  return [
+    { slug: "1" },
+    { slug: "2" },
+    { slug: "3" },
+    { slug: "4" },
+    { slug: "5" },
+    { slug: "6" },
+  ];
+}
+
 export default function StudentProfilePage({ params }: { params: Promise<{ slug: string }> }) {
   return (
     <main className="min-h-screen py-12">

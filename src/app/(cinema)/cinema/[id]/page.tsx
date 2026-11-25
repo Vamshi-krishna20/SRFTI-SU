@@ -21,6 +21,10 @@ const mockScreening = {
   is_active: true,
 };
 
+export function generateStaticParams() {
+  return [{ id: "1" }, { id: "2" }, { id: "3" }, { id: "4" }, { id: "5" }];
+}
+
 export default function ScreeningDetailPage({ params }: { params: Promise<{ id: string }> }) {
   return (
     <main className="min-h-screen py-12">

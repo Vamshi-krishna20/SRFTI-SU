@@ -23,6 +23,10 @@ const mockPoll = {
   ],
 };
 
+export function generateStaticParams() {
+  return [{ id: "1" }];
+}
+
 export default function PollPage({ params }: { params: Promise<{ id: string }> }) {
   const totalVotes = mockPoll.films.reduce((sum, f) => sum + f.votes, 0);
 

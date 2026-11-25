@@ -22,6 +22,10 @@ The council will be formally inaugurated at the upcoming Student Film Festival 2
   is_published: true,
 };
 
+export function generateStaticParams() {
+  return [{ slug: "1" }, { slug: "2" }, { slug: "3" }];
+}
+
 export default function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   return (
     <main className="min-h-screen py-12">
@@ -66,7 +70,7 @@ export default function ArticlePage({ params }: { params: Promise<{ slug: string
           <Button asChild variant="outline" className="flex items-center gap-2">
             <Link href="/awaz-do">More Articles</Link>
           </Button>
-          <Button asChild variant="ghost" className="flex items-center gap-2">
+          <Button variant="ghost" className="flex items-center gap-2">
             <Share2 className="h-4 w-4 mr-2" /> Share
           </Button>
         </div>

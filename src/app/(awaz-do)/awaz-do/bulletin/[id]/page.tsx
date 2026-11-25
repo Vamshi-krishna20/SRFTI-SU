@@ -16,6 +16,10 @@ const mockBulletin = {
   is_published: true,
 };
 
+export function generateStaticParams() {
+  return [{ id: "1" }, { id: "2" }];
+}
+
 export default function BulletinPage({ params }: { params: Promise<{ id: string }> }) {
   return (
     <main className="min-h-screen py-12">
